@@ -12,13 +12,10 @@ formatter = { command = "black", args = ["--quiet", "-"] }
 
 [[language]]
 name = "c"
-[language.debugger]
-name = "lldb-dap"
-transport = "stdio"
-command = "/opt/homebrew/opt/llvm/bin/lldb-dap"
-[[language.debugger.templates]]
-name = "binary"
-request = "launch"
-completion = [{ name = "binary", default = "main" }]
-[language.debugger.templates.args]
-program = "{0}"
+formatter = { command = "clang-format" }
+auto-format = true
+
+[[language]]
+name = "cpp"
+formatter = { command = "clang-format" }
+auto-format = true

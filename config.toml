@@ -18,5 +18,4 @@ hidden = false
 k = "normal_mode"
 
 [keys.normal]
-G = "goto_file_end"
 C-n = "file_explorer"
